@@ -1,0 +1,31 @@
+:root {
+    /*colors*/
+    --primary-color: #333333;
+    --secondary-color: #E15252;
+    --tertiary-color: #4F4F4F;
+    --white-color: #fff;
+    --gray-color: #F2F2F2;
+    --input-invalid: #f3b1b1;
+    --footer-bg: #C4C4C4;
+
+    --border-radius-primary: 42px;
+    --border-radius-secondary: 61px;
+    --border-radius-bottom: 0px 0px 50px 50px;
+    --border-radius-top: 50px 50px 0px 0px;
+
+    --font-size-title: 64px;
+    --font-size-text: 14px;
+    --font-size-medium: 18px;
+}
+
+/*<img src="./assets/main-image.png" alt="image of bicycle repairing">*/
+ /*.header-image {
+        background: url(./assets/red-ellipse.png) no-repeat;
+        background-size: cover;
+        max-width: 45%;
+        img {
+            width: 100%;
+            height: auto;
+            padding-left: 51px;
+        }
+    }*/

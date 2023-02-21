@@ -1,0 +1,49 @@
+@mixin button ($padding){
+    background: var(--secondary-color);
+    border-radius: var(--border-radius-primary);
+    color: var(--white-color);
+    font: {
+        family: 'Hoves700', sans-serif;
+        size: 18px;
+    }
+    padding: 12px $padding;
+}
+
+@mixin maxWidth {
+    max-width: 1920px;
+}
+
+@mixin serviceLink () {
+    background-position: center top, center top;
+    background-size: 200px 200px, 200px 200px;
+    position: absolute;
+    top: 12px;
+    left: 12px;
+}
+
+@mixin centerBlock {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin titleText {
+    font-size: var(--font-size-title);
+    color: var(--white-color);
+    line-height: 64px;
+}
+
+@mixin regularText {
+    font-size: var(--font-size-medium);
+    padding-top: 10px;
+    color: var(--primary-color);
+}
+
+@mixin inputDefault {
+    appearance: none;
+    background-color: transparent;
+    margin: 0;
+    padding: 0;
+    border: none;
+}

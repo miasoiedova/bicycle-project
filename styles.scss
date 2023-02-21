@@ -1,0 +1,394 @@
+@import 'mixins';
+@import 'variable';
+
+@font-face {
+    font-family: Hoves500, sans-serif;
+    src: url(./fonts/TT\ Hoves\ Pro\ Trial\ Medium.ttf);
+}
+
+@font-face {
+    font-family: Hoves700, sans-serif;
+    src: url(./fonts/TT\ Hoves\ Pro\ Trial\ Bold.ttf);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+p,
+h1,
+h2,
+h3,
+a {
+    margin: 0;
+}
+
+p {
+    font-family: 'Hoves500', sans-serif;
+}
+
+h2,
+h3 {
+    font-family: 'Hoves700', sans-serif;
+}
+
+.link{
+    text-decoration: none;
+    text-align: center;
+    white-space: nowrap;
+
+    &.primary {
+        @include button(44px);
+        max-width: 73px;
+    }
+
+    &.secondary{
+        @include button(28px);
+        box-shadow: 0px 4px 20px rgba(225, 82, 82, 0.5);
+        max-width: 208px;
+    }
+
+    &.tertiary{
+        @include button(28px);
+        border-radius: var(--border-radius-secondary);
+        border: 3px solid var(--white-color);
+        max-width: 168px;
+    }
+
+    &:hover{
+        opacity: 0.9;
+        text-decoration: underline;
+    }
+}
+
+header {
+    height: 840px;
+    background: url(./assets/main-image.png) no-repeat right, url(./assets/red-ellipse.png) no-repeat right, url(./assets/bicycle-bg.png) no-repeat;
+    background-size: 50% 100%, 54% 100%, cover;
+    @media screen and (max-width: 1300px) {
+        height: 650px;
+    }
+    @include maxWidth();
+    .header{
+
+        .header-content{
+            display: flex;
+            flex-direction: column;
+            gap: 190px;
+            padding-top: 50px;
+            position: absolute;
+            right: 58%;
+            @media screen and (max-width: 1080px) {
+                right: 55%;
+            }
+
+            &__logo{
+                display: flex;
+                flex-direction: row;
+                gap: 20px;
+
+                img {
+                    max-width: 100%;
+                    height: auto;
+                }
+            }
+
+            &__info {
+                display: flex;
+                flex-direction: column;
+                gap: 30px;
+
+                .header-info-title{
+                    white-space: nowrap;
+                    h3 {
+                        font: {
+                            family: 'Hoves500', sans-serif;
+                            size: 36px;
+                        }
+                        @media screen and (max-width: 1300px) {
+                            font-size: 28px;
+                        }
+                        color: var(--secondary-color);
+                        line-height: 36px;
+                    }
+                    h2{
+                        font-size: 47px;
+                        @media screen and (max-width: 1300px) {
+                            font-size: 38px;
+                        }
+                        color: var(--primary-color);
+                    }
+                }
+                p {
+                    font-size: var(--font-size-text);
+                    color: var(--primary-color);
+                    max-width: 425px;
+                }
+            }
+        }
+    }
+}
+
+.services{
+    @include centerBlock;
+    flex-direction: column;
+
+    .services-header{
+        background-color: var(--gray-color);
+        border-radius: var(--border-radius-bottom);
+        padding: 100px;
+        text-align: center;
+
+        &__title {
+            font-size: var(--font-size-title);
+            color: var(--primary-color);
+        }
+
+        &__description {
+            font-size: var(--font-size-medium);
+            color: var(--secondary-color);
+            padding-top: 10px;
+        }
+    }
+
+    .services-cards{
+        display: flex;
+        flex-direction: row;
+        gap: 72px;
+        @media screen and (max-width: 1300px) {
+            gap: 10px;
+        }
+
+        padding-top: 40px;
+
+        .services-cards-card {
+            text-align: center;
+            max-width: 246px;
+            display: flex;
+            flex-direction: column;
+
+            .services-cards-card-image{
+                border-radius: 50%;
+                background-color: var(--secondary-color);
+                width: 224px;
+                height: 224px;
+                margin: 0 auto;
+                position: relative;
+
+                &__bg{
+                    border-radius: 50%;
+                    width: 200px;
+                    height: 200px;
+
+                    &.service1{
+                        background: linear-gradient(0deg, rgba(225, 82, 82, 0.5), rgba(225, 82, 82, 0.5)), url(./assets/service1.png) no-repeat ;
+                        @include serviceLink ();
+                    }
+
+                    &.service2{
+                        background: linear-gradient(0deg, rgba(225, 82, 82, 0.5), rgba(225, 82, 82, 0.5)), url(./assets/service2.png) no-repeat ;
+                        @include serviceLink ();
+                    }
+
+                    &.service3{
+                        background: linear-gradient(0deg, rgba(225, 82, 82, 0.5), rgba(225, 82, 82, 0.5)), url(./assets/service3.png) no-repeat ;
+                        @include serviceLink ();
+                    }
+
+                    &.service4{
+                        background: linear-gradient(0deg, rgba(225, 82, 82, 0.5), rgba(225, 82, 82, 0.5)), url(./assets/service4.png) no-repeat ;
+                        @include serviceLink ();
+                    }
+                }
+            }
+
+            &__title{
+                font-size: var(--font-size-medium);
+                color: var(--primary-color);
+                padding-top: 8px;
+                padding-bottom: 10px;
+            }
+
+            &__description {
+                font-size: var(--font-size-text);
+                color: var(--tertiary-color);
+            }
+        }
+    }
+
+    .link.secondary {
+        margin: 50px 0;
+    }
+}
+
+.aboutUs{
+    @include centerBlock();
+    width: 100vw;
+    height: 840px;
+    background: url(./assets/bg-bicycles-gray.png) no-repeat top left, var(--secondary-color);
+    background-size: cover, 100%;
+
+    &__title{
+        @include titleText();
+        padding-top: 50px;
+    }
+
+    &__description{
+        @include regularText();
+        padding-bottom: 50px;
+    }
+
+    .aboutUs-block{
+        max-width: 1200px;
+        @media screen and (max-width: 1300px) {
+            max-width: 95%;
+        }
+        height: 648px;
+        border-radius: var(--border-radius-top);
+        background:var(--white-color);
+        display: flex;
+        flex-direction: row;
+        gap: 30px;
+
+        img{
+            height: 100%;
+            border-top-left-radius: inherit;
+        }
+
+        .aboutUs-content{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding-right: 322px;
+            max-width: 352px;
+
+            &__title{
+                font: {
+                    family: 'Vampiro One', cursive;
+                    size: 46px;
+                }
+                color: var(--primary-color);
+                border-bottom: 2px var(--secondary-color) solid;
+                width: 90px;
+                white-space: nowrap;
+                padding-bottom: 22px;
+            }
+
+            &__text{
+                font-size: var(--font-size-text);
+                color: var(--tertiary-color);
+                padding: 20px 0px 30px;
+            }
+        }
+    }
+}
+
+.contactUs{
+    width: 100vw;
+    height: 698px;
+    background: url(./assets/bg-bicycles-pink.png) no-repeat top left;
+    background-size: cover;
+
+    .contactUs-block{
+        max-width: 1200px;
+        @media screen and (max-width: 1300px) {
+            max-width: 95%;
+        }
+        border-radius: var(--border-radius-bottom);
+        background-color: var(--secondary-color);
+        height: 648px;
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+
+        &__title {
+            @include titleText ();
+            padding-top: 100px;
+            margin: 0 auto
+        }
+    
+        &__description{
+            @include regularText ();
+            padding-bottom: 50px;
+            margin: 0 auto
+        }
+
+        .contactUs-content{
+            display: flex;
+            flex-direction: row;
+            gap: 100px;
+            padding-left: 110px;
+
+            .contactUs-content-form{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 14px;
+                border: none;
+
+                input[type="text"],
+                input[type="email"],
+                input[type="tel"] {
+                    @include inputDefault();
+                    background-color: var(--white-color);
+                    border-radius: var(--border-radius-secondary);
+                    height: 36px;
+                    padding: 10px;
+                    min-width: 354px;
+                    font-size: var(--font-size-medium);
+                    border: none;
+
+                    &:focus {
+                        outline: 2px solid var(--tertiary-color);
+                        box-shadow: 1px 1px 10px var(--primary-color);
+                    }
+
+                    &:invalid {
+                        background-color: var(--input-invalid);
+                        
+                        &::placeholder{
+                            color: red;
+                        }
+                    }
+
+                    &:valid {
+                        outline: 2px solid green;
+                    }
+                }
+            }
+
+            .contactUs-content-info{
+                display: flex;
+                flex-direction: column;
+                gap: 30px;
+                color: var(--white-color);
+                font-size: var(--font-size-text);
+                padding-top: 32px;
+
+                p{
+                    padding-left: 44px;
+                    height: 24px;
+                    line-height: 26px;
+                }
+
+                &__email {
+                    background: url(./assets/mail.svg) no-repeat top left;
+                }
+
+                &__phone {
+                    background: url(./assets/call.svg) no-repeat left;
+                }
+                &__address {
+                    background: url(./assets/location-on.svg) no-repeat top left;
+                }
+                }
+        }
+    }
+}
+
+footer{
+    background-color: var(--footer-bg);
+    height: 92px;
+    width: 100vw;
+}
