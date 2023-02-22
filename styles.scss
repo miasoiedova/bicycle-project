@@ -37,6 +37,7 @@ h3 {
     text-decoration: none;
     text-align: center;
     white-space: nowrap;
+    cursor: pointer;
 
     &.primary {
         @include button(44px);

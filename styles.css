@@ -61,6 +61,7 @@ h3 {
   text-decoration: none;
   text-align: center;
   white-space: nowrap;
+  cursor: pointer;
 }
 .link.primary {
   background: var(--secondary-color);
