@@ -132,7 +132,6 @@ header {
 
 .services{
     @include centerBlock;
-    flex-direction: column;
 
     .services-header{
         background-color: var(--gray-color);
@@ -157,7 +156,7 @@ header {
         flex-direction: row;
         gap: 72px;
         @media screen and (max-width: 1300px) {
-            gap: 10px;
+            gap: 8px;
         }
 
         padding-top: 40px;
@@ -223,19 +222,20 @@ header {
 }
 
 .aboutUs{
-    @include centerBlock();
-    width: 100vw;
+    @include maxWidth;
     height: 840px;
     background: url(./assets/bg-bicycles-gray.png) no-repeat top left, var(--secondary-color);
     background-size: cover, 100%;
 
     &__title{
         @include titleText();
+        @include centerBlock();
         padding-top: 50px;
     }
 
     &__description{
         @include regularText();
+        @include centerBlock();
         padding-bottom: 50px;
     }
 
@@ -245,6 +245,7 @@ header {
             max-width: 95%;
         }
         height: 648px;
+        margin: 0 auto;
         border-radius: var(--border-radius-top);
         background:var(--white-color);
         display: flex;
@@ -260,8 +261,6 @@ header {
             display: flex;
             flex-direction: column;
             justify-content: center;
-            padding-right: 322px;
-            max-width: 352px;
 
             &__title{
                 font: {
@@ -279,13 +278,14 @@ header {
                 font-size: var(--font-size-text);
                 color: var(--tertiary-color);
                 padding: 20px 0px 30px;
+                max-width: 352px;
             }
         }
     }
 }
 
 .contactUs{
-    width: 100vw;
+    @include maxWidth();
     height: 698px;
     background: url(./assets/bg-bicycles-pink.png) no-repeat top left;
     background-size: cover;

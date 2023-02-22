@@ -169,7 +169,6 @@ header .header .header-content__info p {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
 }
 .services .services-header {
   background-color: var(--gray-color);
@@ -194,7 +193,7 @@ header .header .header-content__info p {
 }
 @media screen and (max-width: 1300px) {
   .services .services-cards {
-    gap: 10px;
+    gap: 8px;
   }
 }
 .services .services-cards .services-cards-card {
@@ -263,11 +262,7 @@ header .header .header-content__info p {
 }
 
 .aboutUs {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 100vw;
+  max-width: 1920px;
   height: 840px;
   background: url(./assets/bg-bicycles-gray.png) no-repeat top left, var(--secondary-color);
   background-size: cover, 100%;
@@ -276,17 +271,26 @@ header .header .header-content__info p {
   font-size: var(--font-size-title);
   color: var(--white-color);
   line-height: 64px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   padding-top: 50px;
 }
 .aboutUs__description {
   font-size: var(--font-size-medium);
   padding-top: 10px;
   color: var(--primary-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   padding-bottom: 50px;
 }
 .aboutUs .aboutUs-block {
   max-width: 1200px;
   height: 648px;
+  margin: 0 auto;
   border-radius: var(--border-radius-top);
   background: var(--white-color);
   display: flex;
@@ -306,8 +310,6 @@ header .header .header-content__info p {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding-right: 322px;
-  max-width: 352px;
 }
 .aboutUs .aboutUs-block .aboutUs-content__title {
   font-family: "Vampiro One", cursive;
@@ -322,10 +324,11 @@ header .header .header-content__info p {
   font-size: var(--font-size-text);
   color: var(--tertiary-color);
   padding: 20px 0px 30px;
+  max-width: 352px;
 }
 
 .contactUs {
-  width: 100vw;
+  max-width: 1920px;
   height: 698px;
   background: url(./assets/bg-bicycles-pink.png) no-repeat top left;
   background-size: cover;
