@@ -399,17 +399,17 @@ header .header .header-content__info p {
   outline: 2px solid var(--tertiary-color);
   box-shadow: 1px 1px 10px var(--primary-color);
 }
-.contactUs .contactUs-block .contactUs-content .contactUs-content-form input[type=text]:invalid,
-.contactUs .contactUs-block .contactUs-content .contactUs-content-form input[type=email]:invalid,
-.contactUs .contactUs-block .contactUs-content .contactUs-content-form input[type=tel]:invalid {
+.contactUs .contactUs-block .contactUs-content .contactUs-content-form input[type=text]:focus:invalid,
+.contactUs .contactUs-block .contactUs-content .contactUs-content-form input[type=email]:focus:invalid,
+.contactUs .contactUs-block .contactUs-content .contactUs-content-form input[type=tel]:focus:invalid {
   background-color: var(--input-invalid);
 }
-.contactUs .contactUs-block .contactUs-content .contactUs-content-form input[type=text]:invalid::-moz-placeholder, .contactUs .contactUs-block .contactUs-content .contactUs-content-form input[type=email]:invalid::-moz-placeholder, .contactUs .contactUs-block .contactUs-content .contactUs-content-form input[type=tel]:invalid::-moz-placeholder {
+.contactUs .contactUs-block .contactUs-content .contactUs-content-form input[type=text]:focus:invalid::-moz-placeholder, .contactUs .contactUs-block .contactUs-content .contactUs-content-form input[type=email]:focus:invalid::-moz-placeholder, .contactUs .contactUs-block .contactUs-content .contactUs-content-form input[type=tel]:focus:invalid::-moz-placeholder {
   color: red;
 }
-.contactUs .contactUs-block .contactUs-content .contactUs-content-form input[type=text]:invalid::placeholder,
-.contactUs .contactUs-block .contactUs-content .contactUs-content-form input[type=email]:invalid::placeholder,
-.contactUs .contactUs-block .contactUs-content .contactUs-content-form input[type=tel]:invalid::placeholder {
+.contactUs .contactUs-block .contactUs-content .contactUs-content-form input[type=text]:focus:invalid::placeholder,
+.contactUs .contactUs-block .contactUs-content .contactUs-content-form input[type=email]:focus:invalid::placeholder,
+.contactUs .contactUs-block .contactUs-content .contactUs-content-form input[type=tel]:focus:invalid::placeholder {
   color: red;
 }
 .contactUs .contactUs-block .contactUs-content .contactUs-content-form input[type=text]:valid,

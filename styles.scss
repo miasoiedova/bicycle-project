@@ -343,13 +343,13 @@ header {
                     &:focus {
                         outline: 2px solid var(--tertiary-color);
                         box-shadow: 1px 1px 10px var(--primary-color);
-                    }
-
-                    &:invalid {
-                        background-color: var(--input-invalid);
                         
-                        &::placeholder{
-                            color: red;
+                        &:invalid {
+                            background-color: var(--input-invalid);
+                            
+                            &::placeholder{
+                                color: red;
+                            }
                         }
                     }
 
